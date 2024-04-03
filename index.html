@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="heading-main">
+      " Rock"
+      <br>
+      "paper"
+      <br>
+      "scissors"
+    </h1>
+    <div class="header_score-box">
+      <h4 class="heading-custom">Score</h4>
+      <span class="header_value">0</span>
+    </div>
+  </header>
+
+  <main>
+    <!--game container--->
+<div class="game-body">
+  <img class="bg-triangle"   src="images/bg-triangle.svg" alt="BG Triangle">
+  <!--Game Item-->
+  <div class="game-body__circle-container-paper">
+    <div class="game-body__big-circle game-body__big-circle--dark-blue">
+      <div class="game-body__big-circle game-body__big-circle--light-blue"></div>
+      <div class="game-body__tiny-circle game-body__tiny-circle--dark-white">
+        <div class="game-body__tiny-circle game-body__tiny-circle--light-white"></div>
+      </div>
+    </div>
+    <!--Game Item-->
+    <div class="game-body__circle-container-scissors">
+      <div class="game-body__big-circle game-body__big-circle--dark-yellow">
+        <div class="game-body__big-circle game-body__big-circle--light-yellow"></div>
+        <div class="game-body__tiny-circle game-body__tiny-circle--dark-white">
+          <div class="game-body__tiny-circle game-body__tiny-circle--light-white"></div>
+        </div>
+      </div>
+    </div>
+    <!--Game Item-->
+    <div class="game-body__circle-container-rock">
+      <div class="game-body__big-circle game-body__big-circle--dark-red">
+        <div class="game-body__big-circle game-body__big-circle--light-red"></div>
+        <div class="game-body__big-circle game-body__big-circle--dark-white">
+          <div class="game-body__big-circle game-body__big-circle--light-white"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+  </main>
+
+
+  
+  
+</body>
+</html>
