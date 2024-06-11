@@ -8,7 +8,25 @@ const Result = {
     lose: 'lose',
     draw: 'draw'
 }
+const RulesMatrix = {
+    [Signs.rock]: {
+        [Signs.rock]: Result.draw,
+        [Signs.paper]: Result.lose,
+        [Signs.scissors]: Result.win,
+    },
 
+    [Signs.paper]: {
+        [Signs.rock]: Result.win,
+        [Signs.paper]: Result.draw,
+        [Signs.scissors]: Result.lose,
+    },
+
+    [Signs.scissors]: {
+        [Signs.rock]: Result.lose,
+        [Signs.paper]: Result.win,
+        [Signs.scissors]: Result.draw,
+    }
+}
 /**
  * Selecting/comparing 2 options between rock, paper scissors and determines who wins
  * @param {string} sign1
@@ -22,44 +40,7 @@ function compareSign(sign1, sign2) {
     if (!(Object.values(Signs).includes(sign2))) {
         throw new Error(`sign2 is not allowed it has illegal value: ${sign2}`)
     }
-    switch (sign1) {
-        case Signs.rock:
-            switch (sign2) {
-                case Signs.paper:
-                    return Result.lose
-                    break;
-                case Signs.scissors:
-                    return Result.win
-                    break;
-                case Signs.rock:
-                    return Result.draw
-                    break;
-            }
-        case Signs.paper:
-            switch (sign2) {
-                case Signs.paper:
-                    return Result.draw
-                    break;
-                case Signs.scissors:
-                    return Result.lose
-                    break;
-                case Signs.rock:
-                    return Result.win
-                    break;
-            }
-        case Signs.scissors:
-            switch (sign2) {
-                case Signs.paper:
-                    return Result.win
-                    break;
-                case Signs.scissors:
-                    return Result.draw
-                    break;
-                case Signs.rock:
-                    return Result.lose
-                    break;
-            }
-    }
+
+    return RulesMatrix[sign1][sign2]
+
 }
-
-
