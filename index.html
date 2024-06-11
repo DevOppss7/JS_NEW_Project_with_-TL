@@ -11,74 +11,63 @@
 
 <body>
   <!-- Start of header -->
-  <header class="game-container">
-    <div class="game-header">
-      <h1 class="header-text">
-        Rock <br>
-        Paper <br>
-        Scissors
-      </h1>
-      <div class="header-scorebox">
-        <h4 class="scorebox-key">Score</h4>
-        <span class="scorebox-value" id="playerScoreDisplay">0</span>
-      </div>
+  <header class="header">
+    <h1 class="heading-main">
+        Rock<br>
+        Paper<br>Scissors
+    </h1>
+    <div class="header__score-box">
+        <h4 class="heading-custom">Score</h4>
+        <span class="header__value">12</span>
     </div>
-  </header>
-  <!-- End of header -->
+</header>
+<!-- End of header -->
 
-  <!-- Start of game-body -->
-  <main>
+<main>
+    <!-- Start of Game Container -->
     <div class="game-body">
-      <img class="bg-triangle" src="images/bg-triangle.svg" alt="">
+        <img class="bg-triangle" src="images/bg-triangle.svg" alt="">  
+        <!-- game-item -->
+        <div class="buttons">
+            <button class="btn btn-square" id="paperBtn" onclick="playGame('paper')"><div class="sign"><img id="iconImg"
+                    src="./images/icon-paper.svg" alt=""></div></button></div>
+        <!-- game-item -->
+        <div class="buttons">
+            <button class="btn btn-square" id="rockBtn" onclick="playGame('rock')"><div class="sign"><img id="iconImg"
+                    src="./images/icon-rock.svg" alt=""></div></button></div>
+        <!-- game-item -->
+        <div class="buttons">
+            <button class="btn btn-square" id="scissorsBtn" onclick="playGame('scissors')"><div class="sign"><img id="iconImg"
+                    src="./images/icon-scissors.svg" alt=""></div></button></div>
     </div>
-    <!-- Start game-item -->
-    <div class="choices-container">
-      <div class="choices">
-        <div class="icon" id="icon-paper" onclick="playGame('paper')"><img id="iconImg" src="./images/icon-paper.svg"
-            alt="">
+</main>
+
+<!-- Start dummy modal -->
+<div class="modalContainer">
+    <button id="rulesBtn" onclick="sayHello()">Rules</button>
+<!-- Game area and other elements -->
+</div>
+<!-- Start of rules modal -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <div class="popup-rule">
+                <h2>RULES</h2>
+                <button class="close" id="close">✖</button>
+            </div>
+            <div class="popup-img">
+                <img src="images/image-rules.svg" alt="">
+            </div>         
         </div>
-        <div class="icon" id="icon-rock" onclick="playGame('rock')"><img id="iconImg" src="./images/icon-rock.svg"
-            alt="">
-        </div>
-        <div class="icon" id="icon-scissors" onclick="playGame('scissors')"><img id="iconImg"
-            src="./images/icon-scissors.svg" alt="">
-        </div>
-      </div>
     </div>
 
-    <!-- Start of game-logic & display-->
-    <div class="display">
-      <div id="playerDisplay">PLAYER: </div>
-      <div id="computerDisplay">COMPUTER: </div>
-      <div id="resultDisplay"></div>
-    </div>
-    <!-- End of game-logic & display-->
+<!-- Start of rules modal -->
 
-    <!-- Start game-item -->
+<!-- End of game-body -->
 
-    <!-- Start of Rules button -->
-    <div class="rules-btn">
-      <button id="open" onclick="sayHello()">Rules</button>
-    </div>
-    <div class="popup-container">
-      <div class="popup" id="popup_container">
-        <div class="popup-rule">
-          <h2>RULES</h2>
-          <button class="close" id="close">X</button>
-        </div>
-        <div class="popup-img">
-          <img src="images/image-rules.svg" alt="">
-        </div>
-      </div>
-    </div>
-    <!-- End of Rules button -->
-  </main>
-  <!-- End of game-body -->
-
-  <footer class="game-footer">
+<footer class="game-footer">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Group III</a>.
-  </footer>
+    Coded by <a href="#">Group III Project</a>.
+</footer>
 
   <script src="./resources/js/game-logic.js"></script>
   <script src="./resources/js/main.js"></script>

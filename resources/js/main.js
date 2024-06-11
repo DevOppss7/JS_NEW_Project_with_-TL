@@ -1,16 +1,31 @@
-/* Start of rule-btn */
-function sayHello() {
-    console.log("rules was toggled!");
+// Start of rules modal
+// Get the modal element
+const modal = document.getElementById("rulesModal");
+
+// Get the button that opens the modal
+const rulesBtn = document.getElementById("rulesBtn");
+
+// Get the close element that closes the modal
+const closeBtn = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+rulesBtn.onclick = () => {
+    modal.style.display = "block";
+    // Add event listener to the window object
+    window.addEventListener("click", outsideClick);
 }
-const open = document.getElementById('open')
-const popup_container = document.getElementById('popup_container')
-const close = document.getElementById('close')
 
-open.addEventListener('click', () => {
-    popup_container.classList.add('show');
-});
+// When the user clicks on closeBtn (x), close the modal
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+    // Remove the event listener when the modal is closed
+    window.removeEventListener("click", outsideClick);
+}
 
-close.addEventListener('click', () => {
-    popup_container.classList.remove('show');
-});
-/* End of rule-btn */
+// When the user clicks anywhere outside of the modal, it wont close it
+window.onclick = (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// End of rules modal
