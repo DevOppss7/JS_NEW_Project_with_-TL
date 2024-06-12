@@ -1,76 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group III Project | Scissors-Paper-Rock</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Group III Project | Scissors-Paper-Rock</title>
-  <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <!-- Start of header -->
-  <header class="header">
-    <h1 class="heading-main">
-        Rock<br>
-        Paper<br>Scissors
-    </h1>
-    <div class="header__score-box">
+  <body>
+    <!-- Start of header -->
+    <header class="header">
+      <h1 class="heading-main">
+        Rock<br />
+        Paper<br />Scissors
+      </h1>
+      <div class="header__score-box">
         <h4 class="heading-custom">Score</h4>
         <span class="header__value">12</span>
-    </div>
-</header>
-<!-- End of header -->
+      </div>
+    </header>
+    <!-- End of header -->
 
-<main>
-    <!-- Start of Game Container -->
-    <div class="game-body">
-        <img class="bg-triangle" src="images/bg-triangle.svg" alt="">  
+    <main>
+      <!-- Start of Game Container -->
+      <div class="game-body">
+        <img class="bg-triangle" src="images/bg-triangle.svg" alt="" />
         <!-- game-item -->
         <div class="buttons">
-            <button class="btn btn-square" id="paperBtn" onclick="playGame('paper')"><div class="sign"><img id="iconImg"
-                    src="./images/icon-paper.svg" alt=""></div></button></div>
-        <!-- game-item -->
-        <div class="buttons">
-            <button class="btn btn-square" id="rockBtn" onclick="playGame('rock')"><div class="sign"><img id="iconImg"
-                    src="./images/icon-rock.svg" alt=""></div></button></div>
-        <!-- game-item -->
-        <div class="buttons">
-            <button class="btn btn-square" id="scissorsBtn" onclick="playGame('scissors')"><div class="sign"><img id="iconImg"
-                    src="./images/icon-scissors.svg" alt=""></div></button></div>
-    </div>
-</main>
-
-<!-- Start dummy modal -->
-<div class="modalContainer">
-    <button id="rulesBtn" onclick="sayHello()">Rules</button>
-<!-- Game area and other elements -->
-</div>
-<!-- Start of rules modal -->
-    <div id="rulesModal" class="modal">
-        <div class="modal-content">
-            <div class="popup-rule">
-                <h2>RULES</h2>
-                <button class="close" id="close">✖</button>
+          <button
+            class="btn btn-square"
+            id="paperBtn"
+            onclick="playGame('paper')"
+          >
+            <div class="sign">
+              <img id="iconImg" src="./images/icon-paper.svg" alt="" />
             </div>
-            <div class="popup-img">
-                <img src="images/image-rules.svg" alt="">
-            </div>         
+          </button>
         </div>
+        <!-- game-item -->
+        <div class="buttons">
+          <button
+            class="btn btn-square"
+            id="rockBtn"
+            onclick="playGame('rock')"
+          >
+            <div class="sign">
+              <img id="iconImg" src="./images/icon-rock.svg" alt="" />
+            </div>
+          </button>
+        </div>
+        <!-- game-item -->
+        <div class="buttons">
+          <button
+            class="btn btn-square"
+            id="scissorsBtn"
+            onclick="playGame('scissors')"
+          >
+            <div class="sign">
+              <img id="iconImg" src="./images/icon-scissors.svg" alt="" />
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- score mechanism -->
+      <div class="scoreMechanism">
+        <div id="playerDisplay">PLAYER:</div>
+        <div id="computerDisplay">COMPUTER:</div>
+        <div id="resultDisplay"></div>
+
+        <div class="scoreDisplay">
+          Player Score:
+          <span id="playerScoreDisplay">0</span>
+        </div>
+        <div class="scoreDisplay">
+          Computer Score:
+          <span id="computerScoreDisplay">0</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Start of result modal -->
+    <div id="resultModal1" class="modal1">
+      <div class="modal1-content">
+        <span class="close1" id="close1Btn">&times;</span>
+        <p id="modalResult1"></p>
+        <button id="playAgainBtn1">Play Again</button>
+      </div>
     </div>
 
-<!-- Start of rules modal -->
+    <!-- Start of rules modal -->
+    <div class="modalContainer">
+      <button id="rulesBtn" onclick="sayHello()">Rules</button>
+      <!-- Game area and other elements -->
+    </div>
+    <!-- Start of rules modal -->
+    <div id="rulesModal" class="modal">
+      <div class="modal-content">
+        <div class="popup-rule">
+          <h2>RULES</h2>
+          <button class="close" id="close">✖</button>
+        </div>
+        <div class="popup-img">
+          <img src="images/image-rules.svg" alt="" />
+        </div>
+      </div>
+    </div>
 
-<!-- End of game-body -->
+    <!-- End of rules modal -->
 
-<footer class="game-footer">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Group III Project</a>.
-</footer>
+    <!-- End of game-body -->
 
-  <script src="./resources/js/game-logic.js"></script>
-  <script src="./resources/js/main.js"></script>
-</body>
+    <footer class="game-footer">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Group III Project</a>.
+    </footer>
 
+    <script src="./resources/js/game-logic.js"></script>
+    <script src="./resources/js/ui.js"></script>
+    <script src="./resources/js/main.js"></script>
+  </body>
 </html>
