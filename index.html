@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Group III Project | Scissors-Paper-Rock</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <!-- Start of header -->
     <header class="header">
@@ -67,13 +71,12 @@
       <!-- score mechanism -->
       <div class="scoreMechanism">
         <div id="playerDisplay">PLAYER:</div>
-        <div id="computerDisplay">COMPUTER:</div>
-        <div id="resultDisplay"></div>
-
         <div class="scoreDisplay">
           Player Score:
           <span id="playerScoreDisplay">0</span>
         </div>
+        <div id="resultDisplay"></div>
+        <div id="computerDisplay">COMPUTER:</div>
         <div class="scoreDisplay">
           Computer Score:
           <span id="computerScoreDisplay">0</span>
@@ -84,15 +87,20 @@
     <!-- Start of result modal -->
     <div id="resultModal1" class="modal1">
       <div class="modal1-content">
-        <span class="close1" id="close1Btn">&times;</span>
-        <p id="modalResult1"></p>
-        <button id="playAgainBtn1">Play Again</button>
+        <div class="popup-close">
+          <h2>RESULT</h2>
+          <span class="close1" id="close1Btn">✖</span>
+        </div>
+        <div class="popup-result">
+          <p id="modalResult1"></p>
+          <button id="playAgainBtn1">Play Again</button>
+        </div>
       </div>
     </div>
 
     <!-- Start of rules modal -->
     <div class="modalContainer">
-      <button id="rulesBtn" onclick="sayHello()">Rules</button>
+      <button id="rulesBtn">Rules</button>
       <!-- Game area and other elements -->
     </div>
     <!-- Start of rules modal -->
@@ -119,8 +127,6 @@
       >. Coded by <a href="#">Group III Project</a>.
     </footer>
 
-    <script src="./resources/js/game-logic.js"></script>
-    <script src="./resources/js/ui.js"></script>
-    <script src="./resources/js/main.js"></script>
+    <script src="clickableIcons.js"></script>
   </body>
 </html>
