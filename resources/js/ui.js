@@ -16,11 +16,11 @@ let playerScore = 0;
 let computerScore = 0;
 
 // add event listeners to the choice icon
-// close1Btn.addEventListener("click", closeModal);
-// playAgainBtn1.addEventListener("click", resetGame);
+close1Btn.addEventListener("click", closeModal);
+playAgainBtn1.addEventListener("click", resetGame);
 
 // start of game logic
-const playGame = (playerChoice) => {
+function playGame(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * 3)];
   let result = "";
   console.log("Clicked");
@@ -65,31 +65,37 @@ const playGame = (playerChoice) => {
   // end of display result
 
   checkWinner();
-};
+}
 
-const checkWinner = () => {
+function checkWinner() {
   if (playerScore === 5) {
     showModal("You win the game!");
   } else if (computerScore === 5) {
     showModal("You lose the game!");
   }
-};
+}
 
-const showModal = (message) => {
+function showModal(message) {
   modalResult1.textContent = message;
   resultModal1.style.display = "block";
-};
+}
 
 // skip closeModal
-const closeModal = () => {
+function closeModa() {
   resultModal1.style.display = "none";
-};
+}
 
-const resetGame = () => {
+function resetGame() {
   playerDisplay.textContent = "";
   computerDisplay.textContent = "";
   playerScore = 0;
   computerScore = 0;
   playerScoreDisplay.textContent = playerScore;
   computerScoreDisplay.textContent = computerScore;
+}
+
+window.onclick = (event) => {
+  if (event.target == resultModal1) {
+    resultModal1.style.display = "none";
+  }
 };

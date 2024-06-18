@@ -138,6 +138,12 @@ main {
 /* End game-item */
 
 /* score mechanism */
+.scoreMechanism {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 #playerDisplay,
 #computerDisplay {
   font-size: 2rem;
@@ -170,20 +176,61 @@ main {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal1-content {
-  background-color: #c9c9c9;
+  background-color: #fefefe;
+  border-radius: 7px;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
+  width: 400px;
   font-size: 28px;
   text-align: center;
   color: grey;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+}
+.popup-close {
+  color: grey;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0 30px 0;
+}
+.popup-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .close1 {
-  color: #888;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  border: 1px solid #c9c9c9;
+  color: grey;
+  background-color: #eee;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close1:hover,
+.close1:focus {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+#playAgainBtn1 {
+  border: 1px solid #c9c9c9;
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin: 50px 50px;
+}
+#playAgainBtn1:hover,
+#playAgainBtn1:focus {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 
 /* Start of rules modal */
@@ -209,6 +256,10 @@ main {
   padding: 9 0 0 9;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.modalContainer > button:hover {
+  color: hsl(229, 25%, 31%);
+  background-color: #c9c9c9;
 }
 
 .modal {
@@ -247,7 +298,7 @@ main {
   padding: 4px 0 30px 0;
 }
 .close {
-  border: 1px solid #eee;
+  border: 1px solid #c9c9c9;
   color: grey;
   border-radius: 50%;
   width: 36px;
